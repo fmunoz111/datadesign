@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Persona, Usecase, and Interaction Flow</title>
+	</head>
+	<body>
+		<h1><strong>Data Design Project</strong></h1>
+		<h2><em>Dana Whitfield</em></h2>
+		<img src="Screenshot_2018-10-11-08-39-07-1.png" alt="Dana Whitfield" width="100" height="120">
+		<ul>
+			<li>
+				<strong>Age:</strong>
+				25
+			</li>
+			<li>
+				<strong>Gender:</strong>
+				Female
+			</li>
+			<li>
+				<strong>Ethnicity:</strong>
+				Latina
+			</li>
+			<li>
+				<strong>Occupation:</strong>
+				Program Developer
+			</li>
+			<li>
+				<strong>Insurance type:</strong>
+				None
+			</li>
+			<li>
+				<strong>Attitude:</strong>
+				Dana likes to search the internet for her medical needs rather than calling. She likes when she can schedule online, make only 1 payment online via paypal or venmo, and likes to fill out any paperwork prior to the appointment and have it submitted online, as well.
+			</li>
+			<li><strong>Technology:</strong>
+				Dana has an Apple 13.3" MacBook Pro (Space Gray, Late 2016) equipped with a 2.0 GHz Intel Core i5 Dual-Core 8GB of 1866 MHz RAM, 256GB PCIe SSD, 720p FaceTime HD Camera & Dual Mics, 3.5mm Headphones Jack, Stereo Speakers. She also has an iPhone X running iOS 12.0.1.
+			</li>
+			<li>
+				<strong>Needs:</strong>
+				Availability to schedule appointments online, make payments online, and complete/submit any paperwork prior to her appointments.
+			</li>
+			<li>
+				<strong>Goals:</strong>
+				Dana's goal is to schedule aappointments strictly online and go to a physician's office ready to see the Doctor.
+			</li>
+			<li>
+				<strong>Frustrations:</strong>
+				She is not able to find a way to make payments online and sometimes has to call into the office to make appointments that she already thought she made online and does not like dealing with multiple payment.
+			</li>
+		</ul>
+		<h2>User Story</h2>
+			<p>Dana would like to find the physicians she needs in her time online, make the appointment online, and pay out of pocket online.</p>
+		<h2>Use Case</h2>
+		<p>
+			<strong>Title:</strong>
+				Making an appointment with a new OBGYN and making payments online.
+		</p>
+		<p>
+			<strong>Name of user & their role:</strong>
+			Dana; a woman looking for a new OBGYN who wants to do so strictly online.
+		</p>
+		<p>
+			<strong>Usage preconditions:</strong>
+			Must create an account with ThriveMo and fill out prior paperwork that medical offices will ask for.
+		</p>
+		<p>
+			<strong>Usage postconditions:</strong>
+			Dana will be a member on ThriveMo.com and will have most prior paperwork done.  If and when a physician requires more paperwork to be completed, she can do so online via ThriveMo.com in her personal account.
+		</p>
+		<h2>Interaction Flow</h2>
+		<ul>
+			<li>Dana enters ThriveMo.com in her chrome web browser</li>
+			<li>The server return to ThriveMo's main page</li>
+			<li>Dana then clicks on the sign up link in the browser on ThriveMo's main page</li>
+			<li>Server completes the request and is now on the sign up page.</li>
+			<li>Dana enters the required fields and submits her information.</li>
+			<li>The server then </li>
+			<li>The browser then submits her information and return letting her know that her data has been submitted.</li>
+		</ul>
+		<h2>Conceptual Model</h2>
+		<h3><em>Entities & Attributes</em></h3>
+		<p><strong>PATIENT</strong></p>
+		<ul>
+			<li>patientId (primary key)</li>
+			<li>patientProfileId</li>
+			<li>patientEmail</li>
+			<li>patientInformation</li>
+			<li>patientUsername</li>
+			<li>patientDate</li>
+		</ul>
+		<p><strong>Comment</strong></p>
+		<ul>
+			<li>commentPatientId (foreign key)</li>
+			<li>commentDate</li>
+			<li>commentProviderId</li>
+			<li>commentPysicianId</li>
+		</ul>
+		<p><strong>PROVIDER</strong></p>
+		<ul>
+			<li>providerId (foreign key)</li>
+			<li>providerEmail</li>
+			<li>providerVisits</li>
+			<li>providerRatings</li>
+			<li>providerReviews</li>
+		</ul>
+		<p><strong>PHYSICIAN</strong></p>
+		<ul>
+			<li>physicianId (primary key)</li>
+			<li>physicianEmail</li>
+			<li>physicianUsername</li>
+			<li>physicianComments</li>
+			<li>physicianDate</li>
+		</ul>
+		<p><strong>REALTIONS</strong></p>
+		<ul>
+			<li>Many physicians may belong to one provider (1 to 1)</li>
+			<li>One patient may belong to many physicians (1 to m)</li>
+		</ul>
+		<h3> Click link below for the Enitity Relationship Diagram</h3>
+		<div>
+			<a href="erd.html">ERD</a>
+		</div>
+	</body>
+</html>
