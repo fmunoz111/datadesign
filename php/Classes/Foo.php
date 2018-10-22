@@ -189,9 +189,9 @@ public function getPatientUsername() : string {
  * @throws \RangeException if $newPatientUsername is > 115 characters
  * @throws \TypeError if $newPatientUsername is not a string
  **/
-public function setPatientUsername(string $newpPatientEmail) : void {
+public function setPatientUsername(string $newPatientUsername) : void {
 	// verify the patient username is secure
-	$newPatientUsername = trim($newPatientUsername);
+	$newPatientUsername = trim( $newPatientUsername);
 	$newPatientUsername = filter_var($newPatientUsername, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 	if(empty($newPatientUsername) === true) {
 		throw(new \InvalidArgumentException("patient username is empty or insecure"));
