@@ -1,10 +1,10 @@
+alter database fmunoz11 character set utf8 collate utf8_unicode_ci;
 create table patient(
     -> patientId binary(16) not null,
     -> patientProfileId varchar(32) not null,
     -> patientEmail varchar(128) not null,
     -> patientUsername varchar(32) not null,
     -> patientInformation varchar(255) not null,
-    -> patientDate datetime(6) not null,
     -> unique(patientEmail),
     -> unique(patientUsername),
     -> primary key(patientId)
@@ -51,7 +51,7 @@ create table comment(
     -> foreign key(commentPhysicianId) references physician(physicianId)
     -> );
 
-insert into patient(patientId, patientProfileId, patientEmail, patientUsername, patientInformation, patientDate) values(unhex("5d85dd1a70a64eaaaf6dd53a00b063b5"), unhex("9e8834c750694ce6aff279b97b170310"), "susang01@gmail.com", "susg01", "Susan is a 22 year old student with no insurance and she is looking for an OBGYN in the Albuquerque area.", "2018-10-10 12:12:12.12" );
+insert into patient(patientId, patientProfileId, patientEmail, patientUsername, patientInformation) values(unhex("5d85dd1a70a64eaaaf6dd53a00b063b5"), unhex("9e8834c750694ce6aff279b97b170310"), "susang01@gmail.com", "susg01", "Susan is a 22 year old student with no insurance and she is looking for an OBGYN in the Albuquerque area.");
 
 insert into physician(physicianId, physicianEmail, physicianScheduletime, physicianDate, physicianRating, physicianComment) values(unhex("128ca157f7f2430eb206f5ce53488a7a"), "Drjoe@gmail.com", "Available Schedule Times", "2018-10-10 12:12:12.12", "8/10", "physician comments will go here" );
 
